@@ -3,6 +3,9 @@
 Exam outline with links to questions, and solutions that
 exemplify what's needed / asked in the Tableau 10 QA Exam.
 
+Exam prep guide:
+http://mkt.tableau.com/files/Desktop-10-QA-Exam-Prep-Guide.pdf
+
 # Dimensions and Measures
 
 Hint: If it makes sense to add it up, it's likely a measure.
@@ -125,20 +128,67 @@ In this case you'll need to Merge the columns into one (with right click - the o
 https://www.tableau.com/about/blog/2016/1/combine-your-data-files-union-tableau-93-48891
 
 
-
 ### Data Interpreter
 
 
-#
-##
-##
-##
-##
+## Understand connection options
+## Understand how to connect to different file types
+## Understand data extract capabilities
+## Understand Shadow extracts
 
-####
+# Organizing & Simplifying Data
+Understand how to:
+## Filter data
+## Sort data
+## Build groups
+## Build hierarchies
+## Build sets
+
+# Field & Chart Types
+## Understand discrete v. continuous
+## Understand measure names and measure values
+## Understand generated fields
 
 
-# LOD (Level of detail)
+## Understand how and when to build:
+### Histograms
+### Heat maps
+### Tree maps
+### Bullet graphs
+### Combined Axis Charts
+### Dual Axis Charts
+### Scatter Plots
+### Data Highlighter
+### Cross tabs
+### Motion charts
+### Bar in bar charts
+### Box plots
+### Gantt Bar Charts
+### Paretos
+
+Similar to having an ordered barchart with the data, plus a cumulative distribution function overlaid on the chart.
+This is done with a dual axis, and a table calculation:
+
+- First make the barchart. Order the bars by value (descending).
+- Make a line chart with the same data as the barchart.
+  - Make a table calculation to compute the CDF: Running sum percentage.
+  - Change the CDF axis to go from 0 to 100%.
+
+https://www.tableau.com/learn/tutorials/on-demand/pareto-charts
+http://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#pareto.html
+
+### Sparklines
+
+## Understand how to effectively use titles, captions  and tooltips
+### Understand how to edit axes
+### Understand mark labels and annotations
+
+
+# Calculations
+## Understand how to:
+## Manipulate string and date calculations
+## Create quick table calculations
+## Use LOD calculations; types of LOD calculations
 
 Syntax
 
@@ -147,3 +197,46 @@ Syntax
 ```
 
 { FIXED: something_that_will_condition the outcome : calculation_that_depends_on_the_previous_result }
+
+## Use Ad-hoc calculations
+## Work with aggregation options
+## Build logic statements
+## Build arithmetic calculations
+## Build grand totals and sub-totals
+
+# Mapping
+## Understand how to use:
+## Pan & Zoom
+## Filtering
+## Map layering
+## Custom territories
+## Lasso & Radial selection
+## Understand how to modify locations within Tableau
+## Understand how to import and manage custom geocoding
+## Understand how to use a background image map
+## Understand how to use Geographic search
+
+# Analytics
+## Understand how to use:
+## Reference Lines
+## Reference Bands
+## Trend Lines
+## Trend Model
+## Forecasting
+## Drag & Drop Analytics
+
+## Box Plot
+## Reference distributions
+## Statistical summary card
+## Instant Analytics
+
+# Dashboards
+## Understand publishing & sharing options
+## Understand how to build dashboards
+## Understand dashboard actions
+## Understand Device Designer
+## Understand how to create a drill down report
+## Understand how to utilize visual best practices for dashboard design 
+
+
+
