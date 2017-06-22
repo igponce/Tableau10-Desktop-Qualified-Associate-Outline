@@ -1,7 +1,9 @@
 # Tableau Desktop 10 Qualified Associate - Exam Outline
 
-Exam outline with links to questions, and solutions that
+Exam notes with links to questions, and solutions that
 exemplify what's needed / asked in the Tableau 10 QA Exam.
+
+Not 100% done, but enough to pass.
 
 Exam prep guide:
 http://mkt.tableau.com/files/Desktop-10-QA-Exam-Prep-Guide.pdf
@@ -10,6 +12,13 @@ http://mkt.tableau.com/files/Desktop-10-QA-Exam-Prep-Guide.pdf
 
 Hint: If it makes sense to add it up, it's likely a measure.
 
+Dimension: The stuff you use to ask questions. The "who" you restrict the answer to.
+Measures: The numbers / answers you get.
+
+Measures usually are aggregated. It makes sense to see the total/max/min under the point of view of a Dimension.
+By default, Tableau will interpret numerical fields as Measures.
+
+Source: http://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_dataroles_dimensionmeasure.html
 
 
 # Data Connections
@@ -137,36 +146,122 @@ https://www.tableau.com/about/blog/2016/1/combine-your-data-files-union-tableau-
 ## Understand connection options
 ## Understand how to connect to different file types
 ## Understand data extract capabilities
+
+
 ## Understand Shadow extracts
+
+When used: when processing non-legacy excel files, statistical files, or text files.
+Why? Processing some file formats is CPU/IO intensive.
+
+Location:
+    - For Windows: Users\AppData\Local\Tableau\Caching\TemporaryExtracts
+    - For Mac: ~Library/Caches/com.tableau.Caching/TemporaryExtracts
+    - Sometimes also in the "My Tableau Repository\Shadow Extras" folder.
+
+Shadow extracts is data that Tableau stores when using file (like non-legacy excel) to make loading data faster.
+They have .ttde extension.
+Tableau will store up to 5 files with .ttde extension.
+Altough they're named extracts, its file format is not the same as .tde (extract) files.
+
+http://kb.tableau.com/articles/issue/low-disk-space-because-of-ttde-files
+http://www.icancrack.com/index.php/52/what-is-shadow-extract-in-tableau
 
 # Organizing & Simplifying Data
 Understand how to:
 ## Filter data
+
 ## Sort data
+
 ## Build groups
+
 ## Build hierarchies
+
 ## Build sets
+
 
 # Field & Chart Types
 ## Understand discrete v. continuous
+
+How to tell from data:
+Blue pill = Discrete
+Green pill = continuous
+
+Discrete values -> Take a limited number of values (size: XS,S,M,L,XL - City: Madrid, Barcelona, Chigago).
+Could be numeric (customer ID).
+Discrete values are "individually separate and distinct".
+
+Continuous values "forming an unbroken whole, without interruption"
+
+Do not mistake with Dimensions and Measures, altough Dimensions are usually Discrete and Measures continuous.
+
+Filtering and color are special for Dimensions and Measures.
+
+Filtering discrete values: choose members (by hand, or with regex).
+Filtering continuous: by range.
+
+Coloring discrete values: Color palette.
+Coloring continuous values: Using a color gradient.
+
+See http://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_dataroles_dimensionmeasure.html
+
 ## Understand measure names and measure values
+
+This is important in charts that show different measures, like parallel coordinates charts.
+
+In this case you can drag to a row/column "measure names" and "measure values".
+
+To select different measures, you have to filter "measure names" in the filter card.
+
+http://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_understanddatawindow_meavalues.html
+
 ## Understand generated fields
 
 
 ## Understand how and when to build:
 ### Histograms
+
+
+
 ### Heat maps
+
+Heat maps are like "histograms seen from above", or 2D histograms.
+They're usefult to locate "hot spots" on data. That's it places where
+
+Variables in both axes must be discrete (or made discrete by using calculations, like DATEPART('weekday',[Purchase Date]) ).
+Color comes from aggregating continuous [#num records], SUM([Sales]).
+
 ### Tree maps
+
+This kind of graphics does not show a tree.
+Instead it fills a rectangle with data, using area size to display each category importance.
+
+Tree maps can use two measures for coloring hierarchies. In this case, hierarchies will get its Chroma component from the fist dimension and the HUE/brigthness from the second.
+
 ### Bullet graphs
+
+This graphs don't resemble a bullet.
+They are like barcharts with a distribution showing progress towards a goal behing the bar.
+
+https://www.interworks.com/blog/ccapitula/2014/12/29/tableau-essentials-chart-types-bullet-graph
+
 ### Combined Axis Charts
+
+
 ### Dual Axis Charts
+
+
 ### Scatter Plots
 ### Data Highlighter
 ### Cross tabs
 ### Motion charts
 ### Bar in bar charts
 ### Box plots
+
 ### Gantt Bar Charts
+
+Show duration in a calendar.
+
+
 ### Paretos
 
 Similar to having an ordered barchart with the data, plus a cumulative distribution function overlaid on the chart.
@@ -227,7 +322,6 @@ Syntax
 ## Trend Model
 ## Forecasting
 ## Drag & Drop Analytics
-
 ## Box Plot
 ## Reference distributions
 ## Statistical summary card
