@@ -14,6 +14,9 @@ Hint: If it makes sense to add it up, it's likely a measure.
 
 # Data Connections
 ## Understand how to connect to Tableau Server
+
+This is covered in the !(product documentation (for desktop))[https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#examples_tableauserver.html%3FTocPath%3DReference%7CConnector%2520Examples%7CTableau%2520Server%2520or%2520Tableau%2520Online%7C_____0]
+
 ## Understand Performance Optimization
 ### Parallel query
 ### Data engine vectorization
