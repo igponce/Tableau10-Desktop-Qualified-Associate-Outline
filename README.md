@@ -244,6 +244,14 @@ They are like barcharts with a distribution showing progress towards a goal behi
 
 https://www.interworks.com/blog/ccapitula/2014/12/29/tableau-essentials-chart-types-bullet-graph
 
+How to do it:
+
+There is a Bullet Graph quick access.
+https://onlinehelp.tableau.com/current/pro/desktop/en-us/qs_bullet_graphs.html
+
+
+
+
 ### Combined Axis Charts
 
 
