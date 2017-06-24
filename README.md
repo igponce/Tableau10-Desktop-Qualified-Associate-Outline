@@ -8,6 +8,7 @@ Not 100% done, but enough to pass.
 Exam prep guide:
 http://mkt.tableau.com/files/Desktop-10-QA-Exam-Prep-Guide.pdf
 
+
 # Dimensions and Measures
 
 Hint: If it makes sense to add it up, it's likely a measure.
@@ -175,6 +176,10 @@ Understand how to:
 ## Build groups
 
 ## Build hierarchies
+
+To build hierarchies, drag the sub-hierarchy field into the top level.
+For instacne if you have product and product category fields, to create a Product Category - Product hierarchy, you can drag Product over Product Category to create a hierarchy.
+
 
 ## Build sets
 
