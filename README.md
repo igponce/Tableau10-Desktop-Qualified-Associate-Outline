@@ -162,14 +162,44 @@ In this case you'll need to Merge the columns into one (with right click - the o
 
 https://www.tableau.com/about/blog/2016/1/combine-your-data-files-union-tableau-93-48891
 
-
 ### Data Interpreter
 
+Sometimes the data from files does not start at row1.
+Maybe it's displaced several rows with disparate content before (like metadata about when the data was collected, copyright, etc...).
+This is could happen with data published by official statistics agencies (EUROSTAT, INE, etc.)
 
+Example:
+
+```{text}
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 26-06-2017
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+FILE FORMAT (MISSING VALUE CODE IS -9999):
+
+01-06 SOUID: Source identifier
+08-15 DATE : Date YYYYMMDD
+17-21 HU   : humidity in 1 %
+23-27 Q_HU : Quality code for HU (0='valid'; 1='suspect'; 9='missing')
+
+This is the blended series of station SPAIN, BARCELONA-EL RAVAL (STAID: 11014).
+Blended and updated with sources: 155989 
+See file sources.txt and stations.txt for more info.
+
+ SOUID,    DATE,   HU, Q_HU
+155989,20080101,   v1,    v2
+...
+```
 
 ## Understand connection options
 ## Understand how to connect to different file types
+
 ## Understand data extract capabilities
+
 
 
 ## Understand Shadow extracts
