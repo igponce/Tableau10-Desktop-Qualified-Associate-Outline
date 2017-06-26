@@ -169,6 +169,7 @@ http://www.icancrack.com/index.php/52/what-is-shadow-extract-in-tableau
 
 # Organizing & Simplifying Data
 Understand how to:
+
 ## Filter data
 
 ## Sort data
@@ -179,7 +180,6 @@ Understand how to:
 
 To build hierarchies, drag the sub-hierarchy field into the top level.
 For instacne if you have product and product category fields, to create a Product Category - Product hierarchy, you can drag Product over Product Category to create a hierarchy.
-
 
 ## Build sets
 
@@ -230,10 +230,12 @@ http://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_understanddat
 ### Heat maps
 
 Heat maps are like "histograms seen from above", or 2D histograms.
-They're usefult to locate "hot spots" on data. That's it places where
+They're usefult to locate "hot spots" on data.
 
 Variables in both axes must be discrete (or made discrete by using calculations, like DATEPART('weekday',[Purchase Date]) ).
 Color comes from aggregating continuous [#num records], SUM([Sales]).
+
+Size can also be useful for heat maps: playing with sizes can give you more white space that might make a heatmap easier to understand. Also a combination of color and size can highlight "big" hot spots that could be hidden when showing just one variable.
 
 ### Tree maps
 
@@ -244,7 +246,7 @@ Tree maps can use two measures for coloring hierarchies. In this case, hierarchi
 
 ### Bullet graphs
 
-This graphs don't resemble a bullet.
+This graphs don't resemble a bullet at first sight.
 They are like barcharts with a distribution showing progress towards a goal behing the bar.
 
 https://www.interworks.com/blog/ccapitula/2014/12/29/tableau-essentials-chart-types-bullet-graph
@@ -253,8 +255,6 @@ How to do it:
 
 There is a Bullet Graph quick access.
 https://onlinehelp.tableau.com/current/pro/desktop/en-us/qs_bullet_graphs.html
-
-
 
 
 ### Combined Axis Charts
@@ -299,8 +299,29 @@ http://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#pareto.html
 ## Understand how to:
 ## Manipulate string and date calculations
 ## Create quick table calculations
+
+A table calculation is a calculation / computation that is applied to all values of a single measure in a view.
+
+Quick table calculations can be done right clicking a measure. There are 
+
 ## Use LOD calculations; types of LOD calculations
 
+When you add/remove a dimension from a graph, the quantities change.
+LOD calculations help us set the level of detail that we want for a particular field regardless of what is in the view.
+
+Three kinds of LOD calculations:
+
+| LOD | Descr |
+|-----|-------|
+| INCLUDE | Adds the data from the dimension, regardless of what's on the view. |
+| EXCLUDE | Removes the data from the specified dimension, regardless of what's on the view. |
+| FIXED   | Uses the data specified without any reference about anything in the view |
+
+ 
+Stuff to try (from the superstore sample):
+
+- States where profit per customer is higher than 90
+ 
 Syntax
 
 ```{R}
