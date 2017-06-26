@@ -132,11 +132,23 @@ https://www.tableau.com/about/blog/2015/1/tableau-90-auto-data-prep-stay-flow-35
 
 ### Pivot
 
+Example:
+
+| dimension1 | dimension2 | year 2015 | year 2016 |year 2017 |
+|------------|------------|-----------|-----------|----------|
+| data |data |data |data |data |
+
+The fields "year201[567]" are pivoted.
+Tableau cannot work easily with this kind of data unless you make an analytical table form it.
+
+How? Using the pivot option.
+
 - The Pivot option is available from the grid and metadata grid.
 - All fields in the pivot must be from the same connection.
 - Only one pivot is allowed per data source.
 - Pivot fields can be used as the join key.
 - The Pivot option cannot be used in calculated fields.
+
 
 ### Union
 
