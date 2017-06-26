@@ -28,7 +28,17 @@ Source: http://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_types
 This is covered in the !(product documentation (for desktop))[https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#examples_tableauserver.html%3FTocPath%3DReference%7CConnector%2520Examples%7CTableau%2520Server%2520or%2520Tableau%2520Online%7C_____0]
 
 ## Understand Performance Optimization
+
 ### Parallel query
+
+Tableau will perform queries in parallel whenever possible.
+If we're using data from different data sources, Tableau will make queries in parallel without waiting one datasource query to finish before it makes the second query.
+
+The level of paralelism is configurable on the 'connection-configs.xml' file (located in the Tableau instalation dir), see http://kb.tableau.com/articles/howto/Configuring-Parallel-Queries-in-Tableau-Desktop
+
+Why? would anyone like to limit the number of connections for datasources, joins, etc?
+Because it might be a) starving other processes that access the datasource, or b) licensing issues.
+
 ### Data engine vectorization
 
 Scope: Calculations
@@ -142,6 +152,7 @@ https://www.tableau.com/about/blog/2016/1/combine-your-data-files-union-tableau-
 
 
 ### Data Interpreter
+
 
 
 ## Understand connection options
