@@ -300,9 +300,24 @@ http://onlinehelp.tableau.com/current/pro/desktop/en-us/help.html#pareto.html
 ## Manipulate string and date calculations
 ## Create quick table calculations
 
-A table calculation is a calculation / computation that is applied to all values of a single measure in a view.
+A table calculation is a transformation you apply to the values of a single measure in your view, based on the dimensions in the level of detail.
 
-Quick table calculations can be done right clicking a measure. There are 
+Quick table calculations are the easiest way to make table calculations.
+
+Just right click on a can be done right clicking a measure. There are some pre-fixed table calculations available:
+- Running total (great for displaying goals and Cummulative Distribution Functions - RUNNING_SUM(SUM([Sales])))
+- Difference ( ZN(SUM([measure])) - LOOKUP(ZN(SUM([measure])), -1) )
+- Percent difference : (ZN(SUM([measure])) - LOOKUP(ZN(SUM([measure])), -1)) / ABS(LOOKUP(ZN(SUM([measure])), -1))
+- Percent of total : SUM([measure]) / TOTAL(SUM([measure]))
+- Rank (quicker to type than RANK([measure]).
+- Percentile ( Equals to: RANK_PERCENTILE(SUM([measure])) )
+- Moving average (Equals to: WINDOW_AVG(SUM([measure]), -2, 0)
+- (*) YTD Total
+- (*) Compound growt rate
+- (*) Year over Year growth
+- (*) YTD growth
+
+(*) Need a time dimension in order to be calculated.
 
 ## Use LOD calculations; types of LOD calculations
 
@@ -320,7 +335,7 @@ Three kinds of LOD calculations:
  
 Stuff to try (from the superstore sample):
 
-- States where profit per customer is higher than 90
+- Sales contribution by city / region (with respect to country totals)
  
 Syntax
 
