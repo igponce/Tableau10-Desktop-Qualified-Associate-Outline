@@ -229,6 +229,8 @@ Understand how to:
 
 ## Build groups
 
+
+
 ## Build hierarchies
 
 To build hierarchies, drag the sub-hierarchy field into the top level.
@@ -236,6 +238,12 @@ For instacne if you have product and product category fields, to create a Produc
 
 ## Build sets
 
+Why sets?
+
+Sets are useful in situations it's needed to test in-out membership.
+They can built by hand selecting members, using an expression, or *taking the top XX* members by aggregating a measure.
+
+Some complicated questions like, finding the minimum ticket amounts from the top 6 customers can be easily calculated filtering with sets.
 
 # Field & Chart Types
 ## Understand discrete v. continuous
