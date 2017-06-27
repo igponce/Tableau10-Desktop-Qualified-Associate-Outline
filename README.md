@@ -118,7 +118,35 @@ Also, problems with different date formats (be careful to use the same Level of 
 for all data sources).
 
 ## Data Preparation
+
 ### Blending
+
+What is Blending?
+- A left join-like operation between different datasources.
+- Local to the view
+- You can amend some data (using change alias option) on the _primary_ data source (you cannot do this on a Join operation).
+
+Look at the datasources:
+
+Blue check -> Primary data source (the left part of the left join)
+Orange check -> Secondary source (the ritht part of the left join)
+
+#### Automatic Blend
+
+Tableau guesses the blend looking for a field in both data sources with the same name.
+Usually it gets it right :-)
+
+#### Manual Blend
+
+You need to make a manual blend *when* a) fields have different names (Tableau cannot know if they're related or not),
+*or* b) you want to blend datasources using multiple fields as keys.
+
+In either case, you have to edit the relationship between datasources. How?
+
+Select from the top level menu: "Data" -> "Edit Relationship".
+
+*hint:* It's easy to forget Tableau has top level application menu because most of the time you don't need to use it.
+
 
 ### Metadata Grid
 
