@@ -462,11 +462,12 @@ Syntax
 ## Understand how to use Geographic search
 
 # Analytics
-## Understand how to use:
+
 ## Reference Lines
 ## Reference Bands
 ## Trend Lines
 ## Trend Model
+
 ## Forecasting
 ## Drag & Drop Analytics
 ## Box Plot
